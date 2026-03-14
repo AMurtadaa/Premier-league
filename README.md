@@ -35,3 +35,7 @@ To build this project, I installed:
 ## Data
 
 We'll be scraping [FBref](https://fbref.com/en/) to get our data in the first part of this project (`scraping.ipynb`).
+
+## Project Overview
+The Premier League Match Outcome Predictor project focuses ...
+
