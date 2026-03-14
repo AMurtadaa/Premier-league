@@ -11,7 +11,7 @@ In this project, I'll predict the winner of football matches in the English Prem
 
 ## Code
 
-You can find the code for this project [here](https://github.com/AMurtadaa/premier_league_predictor/tree/main/backend_ML).
+You can find the code for this project [here](https://github.com/AMurtadaa/Premier-league).
 
 File overview:
 
