@@ -60,9 +60,12 @@ const Page: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // In a real application, you would make an API call here to get the
-    // prediction results. For now, we'll generate a random percentage.
-    const randomPercentage = Math.floor(Math.random() * 100) + 1;
+    if (homeTeam?.name === awayTeam?.name) {
+      alert('Please select different teams for home and away');
+      return;
+    }
+    // More realistic prediction: 20-80 range (simulating competitive matches)
+    const randomPercentage = Math.floor(Math.random() * 61) + 20;
     setHomeWinPercentage(randomPercentage);
     setShowResult(true);
   };
@@ -82,7 +85,11 @@ const Page: React.FC = () => {
     );
   }
 
-  const TeamSelector = ({ title, value, onChange }: { title: string, value: Team | null, onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void }) => {
+  const TeamSelector = ({ title, value, onChange, selectedTeamName }: { title: string, value: Team | null, onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void, selectedTeamName?: string }) => {
+    const availableTeams = selectedTeamName
+      ? teams.filter(team => team.name !== selectedTeamName)
+      : teams;
+
     return (
       <div className='flex flex-col items-center gap-8'>
         <h3 className='font-bold text-purple-950'>{title}</h3>
@@ -95,7 +102,7 @@ const Page: React.FC = () => {
           value={value?.name || ''}
         >
           <option value="" className='text-slate-400'>Select a team</option>
-          {teams.map((team) => (
+          {availableTeams.map((team) => (
             <option key={team.name} value={team.name}>
               {team.name}
             </option>
@@ -165,13 +172,13 @@ const Page: React.FC = () => {
           onSubmit={handleSubmit}
           className="flex w-full px-20 justify-between max-sm:px-4">
           {/* Home Team */}
-          <TeamSelector title={"HOME TEAM"} value={homeTeam} onChange={handleHomeTeamChange} />
+          <TeamSelector title={"HOME TEAM"} value={homeTeam} onChange={handleHomeTeamChange} selectedTeamName={awayTeam?.name} />
 
           {/* Match Time and Day and Submit*/}
           <PredictorFormMain />
 
           {/* Away Team */}
-          <TeamSelector title="AWAY TEAM" value={awayTeam} onChange={handleAwayTeamChange} />
+          <TeamSelector title="AWAY TEAM" value={awayTeam} onChange={handleAwayTeamChange} selectedTeamName={homeTeam?.name} />
         </form>
       </div>
 
