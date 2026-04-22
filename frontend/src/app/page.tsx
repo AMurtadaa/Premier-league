@@ -174,7 +174,7 @@ const Page: React.FC = () => {
   return (
     <div className=" flex flex-col items-center h-screen w-screen bg-gray-100">
       <div className='flex items-center w-full bg-purple-950 p-4'>
-      <img src="/logo/Priemier league logo image.png" alt="Premier League Logo" className="h-10 w-10 mr-2" />
+      <img src="/logo/Priemier league logo image.png" alt="Premier League Logo" className="h-12 w-auto mr-3 object-contain" />
         <h1 className="text-xl font-bold text-white text-center">
           Premier League
         </h1>
