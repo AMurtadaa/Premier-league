@@ -113,17 +113,24 @@ const Page: React.FC = () => {
   }
 
   const PredictorFormMain = () => {
+    const matchTimes = ['12:30', '15:00', '17:30', '19:45', '20:00', '20:15'];
+
     return (
       <div className="flex flex-col items-center gap-2">
         <h3 className="text-purple-950 font-bold">Match Time</h3>
         <div className="flex flex-col gap-4 w-full text-center">
-          <input
-            type="text"
-            placeholder="(input match hour)"
+          <select
             className="w-full border border-gray-400 rounded px-3 py-2 text-black"
             onChange={handleMatchTimeChange}
             value={matchTime}
-          />
+          >
+            <option value="">Select a time</option>
+            {matchTimes.map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))}
+          </select>
           <h3 className="text-purple-950 font-bold">Match Day</h3>
           <select
             className="w-full border border-gray-400 rounded px-3 py-2  text-black"
