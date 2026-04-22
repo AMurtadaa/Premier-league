@@ -23,4 +23,11 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.2"
   }
+  /** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // Add this line
+  // images: { unoptimized: true } // Usually required for static exports if using next/image
+};
+
+export default nextConfig;
 }

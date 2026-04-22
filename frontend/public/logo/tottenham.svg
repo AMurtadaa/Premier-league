@@ -1,5 +1,0 @@
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="50" fill="white"/>
-  <circle cx="50" cy="50" r="48" fill="none" stroke="#001C3E" stroke-width="4"/>
-  <text x="50" y="60" font-size="35" font-weight="bold" fill="#001C3E" text-anchor="middle" font-family="Arial">TH</text>
-</svg>
