@@ -113,24 +113,31 @@ const Page: React.FC = () => {
   }
 
   const PredictorFormMain = () => {
-    const matchTimes = ['12:30', '15:00', '17:30', '19:45', '20:00', '20:15'];
+    // Generate times from 11:30 to 23:30 in 30-minute intervals
+    const matchTimes = Array.from({ length: 25 }, (_, i) => {
+      const totalMinutes = 11.5 * 60 + i * 30;
+      const hours = Math.floor(totalMinutes / 60);
+      const minutes = Math.floor(totalMinutes % 60);
+      return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+    });
 
     return (
       <div className="flex flex-col items-center gap-2">
         <h3 className="text-purple-950 font-bold">Match Time</h3>
         <div className="flex flex-col gap-4 w-full text-center">
-          <select
+          <input
+            type="text"
+            placeholder="Search or type time"
+            list="matchTimesList"
             className="w-full border border-gray-400 rounded px-3 py-2 text-black"
             onChange={handleMatchTimeChange}
             value={matchTime}
-          >
-            <option value="">Select a time</option>
+          />
+          <datalist id="matchTimesList">
             {matchTimes.map((time) => (
-              <option key={time} value={time}>
-                {time}
-              </option>
+              <option key={time} value={time} />
             ))}
-          </select>
+          </datalist>
           <h3 className="text-purple-950 font-bold">Match Day</h3>
           <select
             className="w-full border border-gray-400 rounded px-3 py-2  text-black"
@@ -167,7 +174,7 @@ const Page: React.FC = () => {
   return (
     <div className=" flex flex-col items-center h-screen w-screen bg-gray-100">
       <div className='flex items-center w-full bg-purple-950 p-4'>
-      <img src="/logo/image.svg" alt="App Icon" className="h-10 w-15 mr-2" />
+      <img src="/logo/Priemier league logo image.png" alt="Premier League Logo" className="h-10 w-10 mr-2" />
         <h1 className="text-xl font-bold text-white text-center">
           Premier League
         </h1>
