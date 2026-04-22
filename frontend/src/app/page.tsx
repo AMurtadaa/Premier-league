@@ -163,7 +163,7 @@ const Page: React.FC = () => {
         <button
           type="submit"
           className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-3 px-6 rounded text-lg disabled:bg-purple-400 disabled:hover:cursor-default hover:cursor-pointer"
-          disabled={!homeTeam || !awayTeam}
+          disabled={!homeTeam || !awayTeam || !matchTime || !matchDay}
         >
           Predict
         </button>
