@@ -9,25 +9,25 @@ interface Team {
 }
 
 const teams: Team[] = [
-  { name: 'Arsenal', logo: '/logo/arsenal.png' },
-  { name: 'Aston Villa', logo: '/logo/aston_villa.png' },
-  { name: 'Bournemouth', logo: '/logo/bournemouth.png' },
-  { name: 'Brentford', logo: '/logo/brentford.png' },
-  { name: 'Brighton & Hove Albion', logo: '/logo/brighton.png' },
-  { name: 'Chelsea', logo: '/logo/chelsea.png' },
-  { name: 'Crystal Palace', logo: '/logo/crystal_palace.png' },
-  { name: 'Everton', logo: '/logo/everton.png' },
-  { name: 'Fulham', logo: '/logo/fulham.png' },
-  { name: 'Liverpool', logo: '/logo/liverpool.png' },
-  { name: 'Luton Town', logo: '/logo/luton_town.png' },
-  { name: 'Manchester City', logo: '/logo/mancity.png' },
-  { name: 'Manchester United', logo: '/logo/man_u.png' },
-  { name: 'Newcastle United', logo: '/logo/newcastle.png' },
-  { name: 'Nottingham Forest', logo: '/logo/nottingham_forest.png' },
-  { name: 'Sheffield United', logo: '/logo/sheffield_united.png' },
-  { name: 'Tottenham Hotspur', logo: '/logo/tottenham.png' },
-  { name: 'West Ham United', logo: '/logo/west_ham.png' },
-  { name: 'Wolverhampton Wanderers', logo: '/logo/wolves.png' },
+  { name: 'Arsenal', logo: '/logo/arsenal.svg' },
+  { name: 'Aston Villa', logo: '/logo/aston_villa.svg' },
+  { name: 'Bournemouth', logo: '/logo/bournemouth.svg' },
+  { name: 'Brentford', logo: '/logo/brentford.svg' },
+  { name: 'Brighton & Hove Albion', logo: '/logo/brighton.svg' },
+  { name: 'Chelsea', logo: '/logo/chelsea.svg' },
+  { name: 'Crystal Palace', logo: '/logo/crystal_palace.svg' },
+  { name: 'Everton', logo: '/logo/everton.svg' },
+  { name: 'Fulham', logo: '/logo/fulham.svg' },
+  { name: 'Liverpool', logo: '/logo/liverpool.svg' },
+  { name: 'Luton Town', logo: '/logo/luton_town.svg' },
+  { name: 'Manchester City', logo: '/logo/mancity.svg' },
+  { name: 'Manchester United', logo: '/logo/man_u.svg' },
+  { name: 'Newcastle United', logo: '/logo/newcastle.svg' },
+  { name: 'Nottingham Forest', logo: '/logo/nottingham_forest.svg' },
+  { name: 'Sheffield United', logo: '/logo/sheffield_united.svg' },
+  { name: 'Tottenham Hotspur', logo: '/logo/tottenham.svg' },
+  { name: 'West Ham United', logo: '/logo/west_ham.svg' },
+  { name: 'Wolverhampton Wanderers', logo: '/logo/wolves.svg' },
 ];
 
 
@@ -152,7 +152,7 @@ const Page: React.FC = () => {
   return (
     <div className=" flex flex-col items-center h-screen w-screen bg-gray-100">
       <div className='flex items-center w-full bg-purple-950 p-4'>
-      <img src="/logo/image.png" alt="App Icon" className="h-10 w-15 mr-2" />
+      <img src="/logo/image.svg" alt="App Icon" className="h-10 w-15 mr-2" />
         <h1 className="text-xl font-bold text-white text-center">
           Premier League
         </h1>
